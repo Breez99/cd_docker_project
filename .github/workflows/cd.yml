@@ -24,8 +24,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/ci-docker-project-flask:latest
-            ${{ secrets.DOCKER_USERNAME }}/ci-docker-project-flask:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/cd_docker_project:latest
+            ${{ secrets.DOCKER_USERNAME }}/cd_docker_project:${{ github.sha }}
 
   deploy:
     needs: build
